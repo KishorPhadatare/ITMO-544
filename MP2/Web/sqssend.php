@@ -9,7 +9,7 @@ try{
     $result = $sqs->sendMessage([
         'DelaySeconds' => 30,
         'MessageBody' => $_GET['source'],
-        'QueueUrl' => '	https://sqs.us-west-2.amazonaws.com/344118653102/krp-sqs'
+        'QueueUrl' => '	https://sqs.us-west-2.amazonaws.com/'
     ]);
     echo 'result is';
     if ($result)
