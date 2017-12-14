@@ -5,10 +5,10 @@ sudo apt-get install apache2 php libapache2-mod-php7.0 php-xml php-simplexml php
 sudo mv vendor/ /var/www/html/
 sudo service apache2 restart
 cd /var/www/html
-ssh-keygen -t rsa -b 4096 -C kphadatare@github.com:illinoistech-itm/kphadatare.git
-sudo git clone https://kphadatare:Hello135@github.com/illinoistech-itm/kphadatare.git
-sudo mv kphadatare/ITMO-544/mp1/Web\ pages/* /var/www/html
-sudo rm -rf kphadatare
+ssh-keygen -t rsa -b 4096 -C username@github.com:illinoistech-itm/username.git
+sudo git clone https://username:password@github.com/illinoistech-itm/username.git
+sudo mv username/ITMO-544/mp1/Web\ pages/* /var/www/html
+sudo rm -rf username
 sudo mkdir /tmp_grayscale
 sudo chmod 777 /tmp_grayscale
 cd ~
