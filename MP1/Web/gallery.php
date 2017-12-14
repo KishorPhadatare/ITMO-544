@@ -4,7 +4,7 @@ use Aws\Rds\RdsClient;
 $clientConn = RdsClient::factory(array('version' => 'latest','region'  => 'us-west-2'));
 $result = $clientConn->describeDBInstances(array('DBInstanceIdentifier' => 'itmo544-mini-project'));
 $endAddress = $result['DBInstances'][0]['Endpoint']['Address'];
-$connection = mysqli_connect($address,"kphadatare","hello135","itmo544","3306") or die("Error " . mysqli_error($link));
+$connection = mysqli_connect($address,"username-database","password-database","itmo544","3306") or die("Error " . mysqli_error($link));
 if(mysqli_connect_errno()) {
         printf("Connection has failed: %s\n", mysqli_connect_error());
         exit();
