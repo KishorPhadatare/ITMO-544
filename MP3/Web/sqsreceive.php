@@ -8,7 +8,7 @@ $sqs = new Aws\Sqs\SqsClient([
 try{
     $rcv = $sqs->receiveMessage([
         'MaxNumberOfMessages' => 1,
-        'QueueUrl' => 'https://sqs.us-west-2.amazonaws.com/344118653102/krp-sqs',
+        'QueueUrl' => 'https://sqs.us-west-2.amazonaws.com/',
         'VisibilityTimeout' => 60,
         'WaitTimeSeconds' => 5
     ]);
@@ -24,7 +24,7 @@ try{
     echo 'localStorage.setItem("rcvqueue",rcvmsg);';
     echo '</script>';
     $result = $sqs->deleteMessage([
-        'QueueUrl' => 'https://sqs.us-west-2.amazonaws.com/344118653102/krp-sqs',
+        'QueueUrl' => 'https://sqs.us-west-2.amazonaws.com/',
         'ReceiptHandle' => $rcvhandle
     ]);
 }catch(AwsException $e){

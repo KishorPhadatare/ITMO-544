@@ -6,11 +6,11 @@ $rds = new Aws\Rds\RdsClient([
 ]);
 $result = $rds->describeDBInstances(['DBInstanceIdentifier' => 'itmo544-mini-project']);
 $endAddress = $result['DBInstances'][0]['Endpoint']['Address'];
-$connection = mysqli_connect($endAddress,"kphadatare","hello135","itmo544") or die("Error " . mysqli_error($link));
+$connection = mysqli_connect($endAddress,"database username","database password","databse name") or die("Error " . mysqli_error($link));
 
-$dbname = 'itmo544';
-$dbuser = 'kphadatare';
-$dbpass = 'hello135';
+$dbname = 'database name';
+$dbuser = 'database username';
+$dbpass = 'database password';
 
 mkdir("/tmp/Backup");
 $Bkpspath = '/tmp/Backup/';

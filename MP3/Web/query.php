@@ -8,7 +8,7 @@ $clientConn = RdsClient::factory(array('version' => 'latest','region'  => 'us-we
 $s3 = new Aws\S3\S3Client(['version' => 'latest','region'  => 'us-west-2']);
 $result = $client->describeDBInstances(array('DBInstanceIdentifier' => 'itmo544-mini-project',));
 $endAddress = $result['DBInstances'][0]['Endpoint']['Address'];
-$connection = mysqli_connect($endAddress,"kphadatare","hello135","itmo544","3306") or die("Error " . mysqli_error($link));
+$connection = mysqli_connect($endAddress,"database username","database password","itmo544","3306") or die("Error " . mysqli_error($link));
 if(mysqli_connect_errno()) {
         printf("Connection failed: %s\n", mysqli_connect_error());
         exit();

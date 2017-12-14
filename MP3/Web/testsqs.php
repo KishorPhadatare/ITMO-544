@@ -40,7 +40,7 @@ print_r($listobjectresults);
 $s3url = $bucketname."/".$listobjectresults['Contents'][0]['Key'];
 //$s3url = "NA";
 // AWS S3 base URL 
-$url = "https://sqs.us-west-2.amazonaws.com/344118653102/krp-sqs".$s3url;
+$url = "https://sqs.us-west-2.amazonaws.com/".$s3url;
 // Publsih a message
 $publishresult = $sqs->publish([
     'Message' => "Hello World -- its a bit rainy -- try this $url", // REQUIRED

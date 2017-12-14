@@ -9,7 +9,7 @@ $result = $client->describeDBInstances(array(
     'DBInstanceIdentifier' => 'itmo-544-mp1'
 ));
 $address = $result['DBInstances'][0]['Endpoint']['Address'];
-$conn = mysqli_connect($address,"aerande","ilovebunnies","db1","3306") or die("Error " . mysqli_error($link));
+$conn = mysqli_connect($address,"databse Username","database Password","db Name","3306") or die("Error " . mysqli_error($link));
 if(mysqli_connect_errno()) {
         printf("Connection failed: %s\n", mysqli_connect_error());
         exit();
